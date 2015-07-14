@@ -1,0 +1,9 @@
+<h1 class="text-uppercase"><span class="glyphicon glyphicon-pencil"> Edit task</h1>
+<form class="user-form" action="/tasks/edit/<%= @tasks.id %>" method="post">
+  <label for="title">
+    Task Name: <input type="text" name="title" id="title" class="form-control" value="<%= @tasks.title %>" required>
+  </label>
+  <button class="btn btn-info" type="submit">
+    Update task
+  </button>
+</form>

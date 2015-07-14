@@ -7,8 +7,8 @@
 <ol>
     <% @incompleted.each do |task| %>
       <li>
-        <p><strong><%= task.title %></strong> - Created at <%= task.created_at.to_s %></p>
-        <p><a href="/tasks/completed/<%= task.id %>"><span class="glyphicon glyphicon-ok"></span> Mark as Completed</a> | <a href="/tasks/remove/<%= task.id %>"><span class="glyphicon glyphicon-remove"></span> Remove</a>
+        <p><strong><%= task.title %></strong> - Created at <%= task.timestamp %></p>
+        <p><a href="/tasks/completed/<%= task.id %>"><span class="glyphicon glyphicon-ok"></span> Mark as Completed</a> | <a href="/tasks/edit/<%= task.id %>"><span class="glyphicon glyphicon-pencil"></span> Edit</a> | <a href="/tasks/remove/<%= task.id %>"><span class="glyphicon glyphicon-remove"></span> Remove</a>
       </li>
     <% end %>
   </ol>
@@ -16,8 +16,8 @@
   <ol>
     <% @completed.each do |task| %>
       <li>
-        <p><strong><%= task.title %></strong> - Created at <%= task.created_at.to_s %></p>
-        <p><a href="/tasks/completed/<%= task.id %>"><span class="glyphicon glyphicon-ok"></span> Mark as Completed</a> | <a href="/tasks/remove/<%= task.id %>"><span class="glyphicon glyphicon-remove"></span> Remove</a>
+        <p><strong><%= task.title %></strong> - Created at <%= task.timestamp %></p>
+        <p><a href="/tasks/edit/<%= task.id %>"><span class="glyphicon glyphicon-pencil"></span> Edit</a> | <a href="/tasks/remove/<%= task.id %>"><span class="glyphicon glyphicon-remove"></span> Remove</a>
       </li>
     <% end %>
   </ol>
